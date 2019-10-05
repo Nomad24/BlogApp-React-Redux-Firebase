@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from "axios";
 import {connect} from "react-redux";
+import {Link} from "react-router-dom"
 
 
 
@@ -21,7 +22,12 @@ class Button extends Component {
         if(this.props.isAuthenticated){
             btn = (
             <div>
-                <button type="button" className="btn btn-info">Update</button>
+                <Link to={{
+                    pathname: "/post-create/edit",
+                    state: {
+                        id: this.props.id
+                    }
+                }} className="btn btn-info">Update</Link>
                 <button type="button" className="btn btn-danger" onClick={this.postDelete}>Delete</button>
             </div>
             )
