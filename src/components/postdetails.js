@@ -23,7 +23,9 @@ class PostDetails extends Component {
                 <div className="card-body">
                     <h5 className="card-title">{this.props.post.title}</h5>
                     <p className="card-text">{this.props.post.text}</p>
-                    <Button id={this.props.match.params.id}/>
+                    <Button 
+                    id={this.props.match.params.id}
+                    />
                 </div>
             </div>
         </div>

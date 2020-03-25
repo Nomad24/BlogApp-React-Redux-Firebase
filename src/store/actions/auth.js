@@ -8,10 +8,10 @@ export function auth(email, password, isLogin) {
             returnSecureToken: true
         }
 
-        let url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=********";
+        let url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBcXQiCL_BttEXHaqKT0UfIcgkpxGjsh8A";
 
         if(isLogin) {
-            url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=********";
+            url = "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBcXQiCL_BttEXHaqKT0UfIcgkpxGjsh8A";
         }
 
         const response = await axios.post(url, authData);
@@ -19,7 +19,6 @@ export function auth(email, password, isLogin) {
 
         const expirationDate = new Date(new Date().getTime() + data.expiresIn * 1000)
 
-        alert("You Logged In");
 
         localStorage.setItem("token", data.idToken);
         localStorage.setItem("userId", data.localId);
@@ -39,7 +38,6 @@ export function autologout(time) {
 }
 
 export function logout() {
-    alert("You Logged Out")
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
     localStorage.removeItem("expirationDate")

@@ -5,7 +5,7 @@ export function fetchPosts(){
     return async dispatch => {
         dispatch(fetchPostsStart())
         try {
-            const response = await axios.get("https://********.firebaseio.com/posts.json")
+            const response = await axios.get("https://blog-app-34387.firebaseio.com/posts.json")
 
             const posts = [];
             Object.keys(response.data).forEach((key) => {
@@ -26,7 +26,7 @@ export function fetchPostById(post_id) {
         dispatch(fetchPostsStart())
 
         try {
-            const response = await axios.get(`https://********.firebaseio.com/posts/${post_id}.json`)
+            const response = await axios.get(`https://blog-app-34387.firebaseio.com/posts/${post_id}.json`)
             const post = response.data;
             dispatch(fetchPostSuccess(post));
         } catch (e) {

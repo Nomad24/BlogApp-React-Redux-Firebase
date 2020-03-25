@@ -30,7 +30,6 @@ class App extends Component {
         if(this.props.isAuthenticated) {
             routes = (
                 <Switch>
-                    <Route path="/post-create/edit" component={PostCreate} />
                     <Route path="/post-create" component={PostCreate} />
                     <Route path="/posts/:id" component={PostDetails} />
                     <Route path="/logout" component={Logout} />

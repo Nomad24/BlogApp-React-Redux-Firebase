@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack --mode development --open --hot",
     "build": "webpack --mode production"
   },
   "author": "Adil Nassipolla",
@@ -21,8 +21,8 @@
     "html-webpack-plugin": "^3.2.0",
     "react-router-dom": "^5.0.1",
     "style-loader": "^1.0.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
+    "reactstrap": "^8.4.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   }

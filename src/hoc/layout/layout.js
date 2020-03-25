@@ -1,5 +1,5 @@
 import React , {Component} from "react";
-import  "../../styles/layout.css"
+import  "../../styles/app.css"
 import {NavLink} from "react-router-dom";
 import {connect} from "react-redux";
 
@@ -22,9 +22,11 @@ class Layout extends Component {
             )
         } else {
             link = (
-            <NavLink to="/auth" className="btn btn-dark my-2 my-sm-0">
+                <div>
+                    <NavLink to="/auth" className="btn btn-dark my-2 my-sm-0">
                 Sing in
             </NavLink>
+                </div>
             )
         }
 
@@ -40,6 +42,8 @@ class Layout extends Component {
                 </nav>
                 <div className="container">
                     <main>
+                    <div className="Post">
+        </div>
                     {this.props.children}
                     </main>
                 </div>                
