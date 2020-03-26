@@ -42,8 +42,6 @@ class Layout extends Component {
                 </nav>
                 <div className="container">
                     <main>
-                    <div className="Post">
-        </div>
                     {this.props.children}
                     </main>
                 </div>                
